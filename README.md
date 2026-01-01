@@ -1,46 +1,188 @@
-# Getting Started with Create React App
+# Study Planner App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive study planning application built with React, Firebase, and FullCalendar.js. Track your study subjects, schedule sessions, and monitor your progress with beautiful charts and analytics.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+### ✅ Authentication & User Management
+- Email/Password authentication with Firebase
+- Protected routes and secure user sessions
+- User profile management
 
-### `npm start`
+### 📚 Subject Management
+- Create and manage study subjects
+- Set target hours and completion dates
+- Track progress with visual indicators
+- Edit and delete subjects
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 📅 Calendar Integration
+- FullCalendar.js integration for scheduling
+- Monthly, weekly, and daily views
+- Click-to-schedule study sessions
+- Drag and drop event management
+- Color-coded subject events
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 📊 Progress Tracking
+- Weekly study hour charts
+- Subject progress visualization
+- Study streak counter
+- Study distribution pie charts
+- Recent study sessions log
 
-### `npm test`
+### 🎨 Modern UI/UX
+- Responsive design for all devices
+- Clean and intuitive interface
+- Smooth animations and transitions
+- Professional color scheme
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Tech Stack
 
-### `npm run build`
+- **Frontend**: React 18 with TypeScript
+- **Backend**: Firebase (Authentication + Firestore)
+- **Calendar**: FullCalendar.js
+- **Charts**: Recharts
+- **Routing**: React Router
+- **Styling**: Custom CSS with responsive design
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📦 Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository
+```bash
+git clone <repository-url>
+cd study-planner-app
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies
+```bash
+npm install
+```
 
-### `npm run eject`
+3. Set up Firebase
+   - Go to [Firebase Console](https://console.firebase.google.com/)
+   - Create a new project
+   - Enable Authentication (Email/Password)
+   - Set up Firestore Database
+   - Copy your Firebase configuration to `src/firebase.ts`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. Start the development server
+```bash
+npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🔧 Firebase Configuration
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. **Enable Authentication**:
+   - Go to Authentication → Sign-in method
+   - Enable Email/Password
 
-## Learn More
+2. **Set up Firestore**:
+   - Go to Firestore Database
+   - Create a new database in test mode
+   - Choose a location near you
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Update Configuration**:
+   - Replace the config in `src/firebase.ts` with your project credentials
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📱 Usage
+
+### Getting Started
+1. Sign up for a new account or log in
+2. Create your first study subject with target hours
+3. Schedule study sessions in the calendar
+4. Track your progress in the Progress section
+
+### Subject Management
+- Click "Subjects" from the dashboard
+- Add subjects with name, description, target hours, and target date
+- View progress bars for each subject
+- Edit or delete subjects as needed
+
+### Calendar Scheduling
+- Click "Calendar" from the dashboard
+- Click on any date to schedule a study session
+- Select subject, time, and add notes
+- Click events to delete them
+- Switch between month, week, and day views
+
+### Progress Tracking
+- Click "Progress" from the dashboard
+- View weekly study hour charts
+- Monitor subject completion progress
+- Check your study streak
+- See study distribution by subject
+
+## 🏗 Project Structure
+
+```
+src/
+├── components/
+│   ├── Auth/           # Authentication components
+│   ├── Dashboard/      # Main dashboard
+│   ├── Subjects/       # Subject management
+│   ├── Calendar/       # Calendar integration
+│   └── Progress/       # Progress tracking
+├── contexts/           # React contexts
+├── services/           # Firebase services
+├── types/              # TypeScript types
+├── firebase.ts         # Firebase configuration
+├── App.tsx            # Main app component
+└── styles.css         # Global styles
+```
+
+## 🚀 Deployment
+
+### Firebase Hosting
+1. Install Firebase CLI
+```bash
+npm install -g firebase-tools
+```
+
+2. Build the app
+```bash
+npm run build
+```
+
+3. Initialize Firebase Hosting
+```bash
+firebase init hosting
+```
+
+4. Deploy
+```bash
+firebase deploy
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🆘 Support
+
+If you encounter any issues or have questions, please:
+1. Check the existing issues
+2. Create a new issue with detailed information
+3. Include screenshots if applicable
+
+## 🔮 Future Features
+
+- [ ] Study reminders and notifications
+- [ ] Pomodoro timer integration
+- [ ] Study groups and collaboration
+- [ ] Export progress reports
+- [ ] Mobile app version
+- [ ] Study goal templates
+- [ ] Advanced analytics and insights
+
+---
+
+Built with ❤️ using React and Firebase
