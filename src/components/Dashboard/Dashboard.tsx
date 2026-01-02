@@ -8,8 +8,8 @@ import Logout from '../Auth/Logout';
 const Dashboard: React.FC = () => {
   const navigate = useNavigate();
   const { currentUser } = useAuth();
-  const [subjects, setSubjects] = useState<Subject[]>([]);
-  const [studyEvents, setStudyEvents] = useState<StudyEvent[]>([]);
+  const [, setSubjects] = useState<Subject[]>([]);
+  const [, setStudyEvents] = useState<StudyEvent[]>([]);
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState({
     todayHours: 0,

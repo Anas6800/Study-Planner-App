@@ -10,8 +10,7 @@ const firebaseConfig = {
   projectId: "study-planner-app-beda6",
   storageBucket: "study-planner-app-beda6.firebasestorage.app",
   messagingSenderId: "852263319218",
-  appId: "1:852263319218:web:a71be851791de84bcd3bab",
-  measurementId: "G-HT3GBDZKEC"
+  appId: "1:852263319218:web:a71be851791de84bcd3bab"
 };
 
 // Initialize Firebase

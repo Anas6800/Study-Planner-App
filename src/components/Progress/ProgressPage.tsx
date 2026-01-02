@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
 import { useAuth } from '../../contexts/AuthContext';
 import { subjectsService, studyEventsService } from '../../services/firestore';
@@ -16,7 +16,7 @@ const ProgressPage: React.FC = () => {
   const { currentUser } = useAuth();
   const navigate = useNavigate();
 
-  const calculateStats = (subjects: Subject[], events: StudyEvent[]) => {
+  const calculateStats = useCallback((subjects: Subject[], events: StudyEvent[]) => {
     console.log('Progress Debug - Subjects:', subjects);
     console.log('Progress Debug - Events:', events);
     
@@ -77,7 +77,7 @@ const ProgressPage: React.FC = () => {
     const streakData = calculateStreak(events);
     setStreak(streakData);
     console.log('Progress Debug - Streak:', streakData);
-  };
+  }, []);
 
   const calculateStreak = (events: StudyEvent[]): number => {
     if (events.length === 0) return 0;
@@ -136,7 +136,7 @@ const ProgressPage: React.FC = () => {
     };
 
     fetchData();
-  }, [currentUser]);
+  }, [currentUser, calculateStats]);
 
   // Show loading while checking auth state and fetching data
   if (loading) {
